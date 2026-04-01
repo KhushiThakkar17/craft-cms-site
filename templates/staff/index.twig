@@ -1,0 +1,20 @@
+{% extends "_layout" %}
+
+{% block title %}Staff Directory{% endblock %}
+
+{% block content %}
+  <h2 style="margin-bottom:24px; color:#1a1a2e; border-left:4px solid #c41230; padding-left:12px;">Staff Directory</h2>
+
+  {% set staffMembers = craft.entries.section('staff').orderBy('title asc').all() %}
+  <div style="display:flex; gap:20px; flex-wrap:wrap;">
+    {% for member in staffMembers %}
+      <div style="flex:1; min-width:250px; border:1px solid #ddd; border-top:4px solid #c41230; padding:24px; border-radius:4px;">
+        <h3 style="margin-bottom:6px; color:#1a1a2e;">{{ member.title }}</h3>
+        <p style="font-size:14px; color:#666; margin-bottom:4px;"><strong>{{ member.jobTitle ?? 'Staff Member' }}</strong></p>
+        <p style="font-size:14px;">{{ member.email ?? '' }}</p>
+      </div>
+    {% else %}
+      <p>No staff members found.</p>
+    {% endfor %}
+  </div>
+{% endblock %}
