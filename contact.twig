@@ -1,0 +1,26 @@
+{% extends "_layout" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+  <h2 style="margin-bottom:24px; color:#1a1a2e; border-left:4px solid #c41230; padding-left:12px;">Contact Us</h2>
+
+  <div style="max-width:600px; background:#f5f5f5; padding:40px; border-radius:4px;">
+    <form method="post" accept-charset="UTF-8">
+      {{ csrfInput() }}
+      <div style="margin-bottom:16px;">
+        <label style="display:block; margin-bottom:6px; font-weight:bold;">Full Name *</label>
+        <input type="text" name="name" required style="width:100%; padding:10px; border:1px solid #ddd; border-radius:4px;">
+      </div>
+      <div style="margin-bottom:16px;">
+        <label style="display:block; margin-bottom:6px; font-weight:bold;">Email *</label>
+        <input type="email" name="email" required style="width:100%; padding:10px; border:1px solid #ddd; border-radius:4px;">
+      </div>
+      <div style="margin-bottom:16px;">
+        <label style="display:block; margin-bottom:6px; font-weight:bold;">Message *</label>
+        <textarea name="message" rows="5" required style="width:100%; padding:10px; border:1px solid #ddd; border-radius:4px;"></textarea>
+      </div>
+      <button type="submit" style="background:#c41230; color:white; padding:12px 28px; border:none; border-radius:4px; cursor:pointer;">Send Message</button>
+    </form>
+  </div>
+{% endblock %}
