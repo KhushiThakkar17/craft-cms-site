@@ -1,0 +1,14 @@
+{% extends "_layout" %}
+
+{% block title %}{{ entry.title }}{% endblock %}
+
+{% block content %}
+  <article>
+    <h2 style="color:#1a1a2e; margin-bottom:8px;">{{ entry.title }}</h2>
+    <p style="color:#888; font-size:13px; margin-bottom:24px;">Posted on {{ entry.postDate|date('F d, Y') }}</p>
+    <div style="line-height:1.8; font-size:15px;">
+      {{ entry.body ?? '<p>Content coming soon.</p>'|raw }}
+    </div>
+    <a href="/news" style="display:inline-block; margin-top:24px; color:#c41230;">← Back to News</a>
+  </article>
+{% endblock %}
