@@ -1,22 +1,21 @@
 # Craft CMS Site — ORA Research Office
 
-Explored and configured Craft CMS architecture to model a university 
-research administration office website, simulating the structure of 
-the UMD VPR/ORA web presence.
+Craft CMS site templates for a university research administration office — includes custom Twig templates, entry types, sections, and field layouts modeled after the UMD ORA website structure.
 
-## Content Structure Built
+## Content Structure
 - 4 custom entry types: News, Staff, Resources, Announcements
 - 3 sections: Singles (Homepage), Channels (News), Structures (Resources)
 - 10+ custom fields: Plain Text, Rich Text, Assets, Date, Dropdown
 - Custom field layouts per entry type
 
 ## Templates
-- _layout.twig — Base layout with header, nav, footer
-- index.twig — Homepage template
-- news/_entry.twig — Individual news entry
-- staff/index.twig — Staff directory listing
-- resources/index.twig — Resources listing page
-- contact.twig — Contact page
+- `_layout.twig` — Base layout with header, nav, footer
+- `index.twig` — Homepage template
+- `news/index.twig` — News listing page
+- `news/_entry.twig` — Individual news entry
+- `staff/index.twig` — Staff directory listing
+- `resources/index.twig` — Resources listing page
+- `contact.twig` — Contact page with CSRF protection
 
 ## Key Concepts
 - Twig templating with template inheritance using extends and blocks
